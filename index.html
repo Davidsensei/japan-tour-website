@@ -1,1 +1,1551 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#faf8f3">
+  <meta name="description" content="Discover Japan on a relaxed 14-day small-group tour, with private transport, airport transfers and friendly local guidance.">
+  <title>Japan Tour | Real Japan, Thoughtfully Planned</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #faf8f3;
+      --paper: #ffffff;
+      --navy: #192d40;
+      --red: #b52d3b;
+      --red-dark: #912330;
+      --muted: #68717b;
+      --line: #e8e2d9;
+      --soft: #f2eee7;
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
+      --width: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--navy);
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    img { display: block; max-width: 100%; }
+
+    a { color: inherit; }
+
+    button, input, textarea, select { font: inherit; }
+
+    .container {
+      width: min(var(--width), calc(100% - 48px));
+      margin-inline: auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--red);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      margin-top: 0;
+      font-family: var(--serif);
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    h1 { font-size: clamp(40px, 5.6vw, 66px); }
+    h2 { font-size: clamp(29px, 3.5vw, 40px); }
+    h3 { font-size: 21px; }
+
+    p { margin-top: 0; }
+
+    .section { padding: 76px 0; }
+
+    .section-intro {
+      max-width: 670px;
+      margin-bottom: 34px;
+    }
+
+    .section-intro p { color: var(--muted); }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 47px;
+      padding: 12px 23px;
+      border: 1px solid var(--red);
+      border-radius: 30px;
+      background: var(--red);
+      color: white;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background .2s, transform .2s;
+    }
+
+    .button:hover {
+      background: var(--red-dark);
+      transform: translateY(-1px);
+    }
+
+    .button-outline {
+      background: transparent;
+      color: var(--red);
+    }
+
+    .button-outline:hover { color: white; }
+
+    /* Header and navigation */
+
+    .site-header {
+      position: sticky;
+      z-index: 20;
+      top: 0;
+      background: rgba(250,248,243,.97);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 44px;
+      height: 44px;
+      flex: 0 0 44px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--red);
+      color: white;
+      font-size: 24px;
+    }
+
+    .brand-name {
+      display: block;
+      font-family: var(--serif);
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: .18em;
+      line-height: 1.4;
+    }
+
+    .brand-tagline {
+      display: block;
+      color: var(--muted);
+      font-family: var(--serif);
+      font-size: 11px;
+      font-style: italic;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      padding: 8px 0;
+      font-size: 12px;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover { color: var(--red); }
+
+    .menu-toggle {
+      display: none;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: transparent;
+      color: var(--navy);
+      cursor: pointer;
+    }
+
+    /* Hero */
+
+    .hero {
+      position: relative;
+      display: flex;
+      align-items: center;
+      min-height: 510px;
+      overflow: hidden;
+      background: #dce4e8;
+    }
+
+    .hero-image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 48%;
+    }
+
+    .hero::after {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg,
+        rgba(250,248,243,.96) 0%,
+        rgba(250,248,243,.88) 32%,
+        rgba(250,248,243,.3) 58%,
+        rgba(250,248,243,0) 100%);
+      content: "";
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      padding: 65px 0;
+    }
+
+    .hero-copy { max-width: 540px; }
+
+    .hero h1 { margin-bottom: 20px; }
+
+    .hero-copy > p:not(.eyebrow) {
+      max-width: 440px;
+      margin-bottom: 27px;
+      color: #394858;
+      font-size: 15px;
+    }
+
+    .hero-note {
+      margin-top: 15px;
+      color: #515c67;
+      font-size: 11px;
+    }
+
+    /* Highlights */
+
+    .highlights {
+      padding: 27px 0;
+      border-bottom: 1px solid var(--line);
+      background: var(--paper);
+    }
+
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .highlight {
+      padding: 8px 15px;
+      text-align: center;
+    }
+
+    .highlight + .highlight { border-left: 1px solid var(--line); }
+
+    .highlight-icon {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--red);
+      font-size: 26px;
+    }
+
+    .highlight strong {
+      display: block;
+      font-family: var(--serif);
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .highlight span:last-child {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    /* General content */
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 54px;
+    }
+
+    .body-copy { color: var(--muted); }
+
+    .photo {
+      width: 100%;
+      height: 320px;
+      border-radius: 5px;
+      object-fit: cover;
+    }
+
+    .text-link {
+      display: inline-block;
+      margin-top: 8px;
+      color: var(--red);
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .text-link:hover { text-decoration: underline; }
+
+    .route-list, .check-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .route-list li, .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      font-size: 13px;
+    }
+
+    .route-list li::before {
+      color: var(--red);
+      content: "●";
+      font-size: 12px;
+    }
+
+    .check-list li::before {
+      color: var(--red);
+      content: "✓";
+      font-weight: 700;
+    }
+
+    .soft-section {
+      background: var(--soft);
+    }
+
+    .route-panel {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .route-panel .photo { height: 300px; }
+
+    .transport-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .transport-grid .photo { height: 260px; }
+
+    /* Guide */
+
+    .guide-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .guide-grid .photo { height: 350px; }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 22px;
+    }
+
+    .tag {
+      padding: 6px 12px;
+      border: 1px solid #ded5ca;
+      border-radius: 30px;
+      color: #525d68;
+      font-size: 11px;
+    }
+
+    /* Who the tour suits */
+
+    .audience-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .audience-image {
+      width: 100%;
+      height: 240px;
+      border-radius: 5px;
+      object-fit: cover;
+    }
+
+    /* Itinerary */
+
+    .itinerary-hero {
+      padding: 70px 0 45px;
+      background: var(--soft);
+      text-align: center;
+    }
+
+    .itinerary-hero p {
+      max-width: 680px;
+      margin: 0 auto;
+      color: var(--muted);
+    }
+
+    .itinerary-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .day-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: white;
+    }
+
+    .day-card summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 20px;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .day-card summary::-webkit-details-marker { display: none; }
+
+    .day-title {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .day-number {
+      display: grid;
+      width: 37px;
+      height: 37px;
+      flex: 0 0 37px;
+      place-items: center;
+      border-radius: 50%;
+      background: #f7e8e8;
+      color: var(--red);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .day-title strong {
+      display: block;
+      font-family: var(--serif);
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .day-title small {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .day-arrow {
+      color: var(--red);
+      transition: transform .2s;
+    }
+
+    .day-card[open] .day-arrow { transform: rotate(180deg); }
+
+    .day-content {
+      padding: 0 22px 20px 70px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .day-content ul {
+      padding-left: 18px;
+    }
+
+    .itinerary-note {
+      margin-top: 26px;
+      padding: 18px 20px;
+      border-left: 3px solid var(--red);
+      background: var(--soft);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* Information and FAQs */
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .info-card {
+      padding: 27px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: white;
+    }
+
+    .info-card h3 { margin-bottom: 18px; }
+
+    .info-card ul {
+      display: grid;
+      gap: 11px;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .faq-item {
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: white;
+    }
+
+    .faq-item summary {
+      padding: 17px 20px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .faq-answer {
+      padding: 0 20px 18px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .terms-copy {
+      max-width: 800px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .terms-copy h3 {
+      margin-top: 25px;
+      color: var(--navy);
+      font-size: 18px;
+    }
+
+    /* Enquiry */
+
+    .enquiry-section {
+      position: relative;
+      overflow: hidden;
+      background: var(--navy);
+      color: white;
+    }
+
+    .enquiry-section .eyebrow { color: #f1b9bd; }
+
+    .enquiry-section .section-intro p { color: #d6dde3; }
+
+    .enquiry-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .enquiry-form {
+      display: grid;
+      gap: 16px;
+      padding: 28px;
+      border-radius: 9px;
+      background: white;
+      color: var(--navy);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .field {
+      display: grid;
+      gap: 6px;
+    }
+
+    .field label {
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .field input, .field select, .field textarea {
+      width: 100%;
+      min-height: 44px;
+      padding: 11px 12px;
+      border: 1px solid #dcdfe3;
+      border-radius: 5px;
+      background: white;
+      color: var(--navy);
+    }
+
+    .field textarea {
+      min-height: 105px;
+      resize: vertical;
+    }
+
+    .form-note {
+      margin: 0;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .form-status {
+      margin: 0;
+      color: var(--red-dark);
+      font-size: 12px;
+    }
+
+    .enquiry-points {
+      display: grid;
+      gap: 15px;
+      margin-top: 25px;
+      color: #e1e6eb;
+      font-size: 13px;
+    }
+
+    .enquiry-points span::before {
+      margin-right: 10px;
+      color: #f1b9bd;
+      content: "✓";
+    }
+
+    /* Final call to action and footer */
+
+    .final-cta {
+      padding: 58px 0;
+      background: #eee9df;
+      text-align: center;
+    }
+
+    .final-cta h2 { margin-bottom: 12px; }
+
+    .final-cta p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .site-footer {
+      padding: 25px 0;
+      background: var(--cream);
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    /* Mobile layout */
+
+    @media (max-width: 760px) {
+      .container { width: min(100% - 36px, var(--width)); }
+
+      .nav { min-height: 68px; }
+
+      .brand-mark {
+        width: 38px;
+        height: 38px;
+        flex-basis: 38px;
+      }
+
+      .brand-name { font-size: 14px; }
+      .brand-tagline { font-size: 10px; }
+
+      .menu-toggle { display: block; }
+
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: none;
+        align-items: stretch;
+        gap: 0;
+        padding: 8px 18px 18px;
+        border-bottom: 1px solid var(--line);
+        background: var(--cream);
+      }
+
+      .nav-links.open { display: flex; flex-direction: column; }
+
+      .nav-links a {
+        padding: 12px 6px;
+        border-bottom: 1px solid var(--line);
+        font-size: 14px;
+      }
+
+      .hero { min-height: 590px; align-items: end; }
+
+      .hero-image {
+        object-position: 58% center;
+      }
+
+      .hero::after {
+        background: linear-gradient(0deg,
+          rgba(250,248,243,.99) 0%,
+          rgba(250,248,243,.95) 43%,
+          rgba(250,248,243,.48) 72%,
+          rgba(250,248,243,.08) 100%);
+      }
+
+      .hero-content { padding: 240px 0 36px; }
+
+      .hero-copy { max-width: 540px; }
+
+      .hero h1 { font-size: clamp(39px, 11vw, 53px); }
+
+      .hero-copy > p:not(.eyebrow) { font-size: 14px; }
+
+      .highlights { padding: 16px 0; }
+
+      .highlight-grid { grid-template-columns: 1fr 1fr; }
+
+      .highlight { padding: 14px 8px; }
+
+      .highlight:nth-child(3) {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .highlight:nth-child(4) { border-top: 1px solid var(--line); }
+
+      .highlight strong { font-size: 14px; }
+
+      .section { padding: 53px 0; }
+
+      .two-column, .route-panel, .transport-grid,
+      .guide-grid, .audience-grid, .enquiry-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .photo, .route-panel .photo,
+      .transport-grid .photo, .guide-grid .photo {
+        height: 245px;
+      }
+
+      .route-panel .route-copy { order: -1; }
+
+      .itinerary-hero { padding: 50px 0 30px; }
+
+      .itinerary-layout, .info-grid { grid-template-columns: 1fr; }
+
+      .day-card summary { padding: 15px; }
+
+      .day-content { padding: 0 17px 18px 64px; }
+
+      .info-card { padding: 22px; }
+
+      .enquiry-grid { gap: 22px; }
+
+      .enquiry-form { padding: 20px; }
+
+      .form-row { grid-template-columns: 1fr; }
+
+      .footer-inner {
+        flex-direction: column;
+        gap: 5px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Japan Tour home">
+        <span class="brand-mark" aria-hidden="true">富</span>
+        <span>
+          <span class="brand-name">JAPAN TOUR</span>
+          <span class="brand-tagline">Real Japan. Thoughtfully Planned.</span>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle"
+        aria-expanded="false" aria-controls="navLinks">
+        Menu ☰
+      </button>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#itinerary">Itinerary</a>
+        <a href="#information">Tour Information</a>
+        <a href="#enquire">Enquire</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section class="hero" id="home">
+      <img class="hero-image"
+        src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=2000&q=85"
+        alt="Traditional Japanese streets and architecture"
+        fetchpriority="high">
+
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <p class="eyebrow">14 days / 13 nights</p>
+          <h1>Discover the Best of Japan</h1>
+          <p>
+            From vibrant cities to timeless temples, experience Japan
+            on a thoughtfully planned small-group tour, with comfortable
+            transport, friendly guidance and time to enjoy the journey.
+          </p>
+          <a class="button" href="#enquire">
+            Register Your Interest <span aria-hidden="true">→</span>
+          </a>
+          <p class="hero-note">A relaxed way to explore Japan, from arrival to departure.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOUR HIGHLIGHTS -->
+    <section class="highlights" aria-label="Tour highlights">
+      <div class="container highlight-grid">
+        <div class="highlight">
+          <span class="highlight-icon" aria-hidden="true">♧</span>
+          <strong>Small Groups</strong>
+          <span>A more personal experience</span>
+        </div>
+        <div class="highlight">
+          <span class="highlight-icon" aria-hidden="true">▰</span>
+          <strong>Private Transport</strong>
+          <span>Comfortable and convenient</span>
+        </div>
+        <div class="highlight">
+          <span class="highlight-icon" aria-hidden="true">✈</span>
+          <strong>Airport Transfers</strong>
+          <span>Arrival and departure support</span>
+        </div>
+        <div class="highlight">
+          <span class="highlight-icon" aria-hidden="true">◇</span>
+          <strong>Guided Support</strong>
+          <span>Local knowledge throughout</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT AND ROUTE PREVIEW -->
+    <section class="section" id="about">
+      <div class="container route-panel">
+        <div>
+          <p class="eyebrow">A thoughtful way to travel</p>
+          <h2>About the Tour</h2>
+          <p class="body-copy">
+            Japan offers an extraordinary mix of modern cities, historic
+            places, beautiful landscapes and everyday cultural experiences.
+            Seeing it all can feel daunting when you are organising
+            everything yourself.
+          </p>
+          <p class="body-copy">
+            This tour brings the planning and transport together, allowing
+            you to explore with a clear itinerary and friendly support,
+            without having to navigate every detail alone.
+          </p>
+          <a class="text-link" href="#information">Learn more about the tour →</a>
+        </div>
+
+        <div>
+          <h3>14 Days / 13 Nights — Route Highlights</h3>
+          <ul class="route-list">
+            <li>Tokyo — city life and culture</li>
+            <li>Mount Fuji / Hakone — scenic Japan</li>
+            <li>Kyoto — traditional streets and temples</li>
+            <li>Hiroshima — history and reflection</li>
+            <li>Osaka — food, neighbourhoods and atmosphere</li>
+            <li>Return to Tokyo for departure</li>
+          </ul>
+          <p class="body-copy" style="font-size:12px;margin-top:16px">
+            Route details are provisional and will be confirmed before bookings open.
+          </p>
+          <a class="button button-outline" href="#itinerary">View the Itinerary</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRANSPORT -->
+    <section class="section soft-section" id="transport">
+      <div class="container transport-grid">
+        <img class="photo"
+          src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1100&q=80"
+          alt="Comfortable road travel through Japan"
+          loading="lazy">
+
+        <div>
+          <p class="eyebrow">Travel in comfort</p>
+          <h2>Getting Around Is Made Simple</h2>
+          <p class="body-copy">
+            Getting around an unfamiliar country can be one of the most
+            tiring parts of a holiday. Private group transport helps keep
+            the journey comfortable and straightforward.
+          </p>
+          <ul class="check-list">
+            <li>Airport transfers at the start and end of the tour</li>
+            <li>Private bus transport for planned group journeys</li>
+            <li>Transfers between hotels and activity destinations</li>
+            <li>Less time managing luggage and complicated connections</li>
+          </ul>
+          <p class="body-copy" style="font-size:12px;margin-top:14px">
+            Transport arrangements and vehicle availability will be confirmed
+            in the final tour details.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GUIDE -->
+    <section class="section" id="guide">
+      <div class="container guide-grid">
+        <img class="photo"
+          src="https://images.unsplash.com/photo-1528164344705-47542687000d?auto=format&fit=crop&w=1000&q=85"
+          alt="A peaceful view of Japan"
+          loading="lazy">
+
+        <div>
+          <p class="eyebrow">Your guide in Japan</p>
+          <h2>A Friendly Face and Local Knowledge</h2>
+          <p class="body-copy">
+            Your guide is Irish and has lived in Japan for many years,
+            building experience of the country's culture, daily life
+            and the practical details that help a visit run smoothly.
+          </p>
+          <p class="body-copy">
+            Travel experience across Japan and around the world — including
+            Europe, South America, Asia, New Zealand and Australia — brings
+            an understanding of what it feels like to explore somewhere new.
+          </p>
+          <p class="body-copy">
+            With Japanese-language ability and an approachable, relaxed
+            style, the aim is to help visitors feel comfortable, answer
+            questions and enjoy discovering Japan.
+          </p>
+          <div class="tag-list">
+            <span class="tag">Irish guide</span>
+            <span class="tag">Long-term Japan resident</span>
+            <span class="tag">Japanese-language support</span>
+            <span class="tag">Friendly guidance</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO THE TOUR IS FOR -->
+    <section class="section soft-section">
+      <div class="container audience-grid">
+        <div>
+          <p class="eyebrow">Is this tour right for you?</p>
+          <h2>Japan at a Comfortable Pace</h2>
+          <p class="body-copy">
+            This tour is designed for people who want to experience Japan
+            with the reassurance of a plan, while still having time to
+            enjoy the places they visit.
+          </p>
+          <ul class="check-list">
+            <li>First-time visitors to Japan</li>
+            <li>Travellers who enjoy culture, scenery and local life</li>
+            <li>People who prefer organised transport and clear plans</li>
+            <li>Those who appreciate a friendly, supportive atmosphere</li>
+          </ul>
+        </div>
+
+        <img class="audience-image"
+          src="https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?auto=format&fit=crop&w=1100&q=80"
+          alt="Traditional Japanese architecture and gardens"
+          loading="lazy">
+      </div>
+    </section>
+
+    <!-- ITINERARY -->
+    <section id="itinerary">
+      <div class="itinerary-hero">
+        <div class="container">
+          <p class="eyebrow">Your journey, day by day</p>
+          <h2>14 Days in Japan</h2>
+          <p>
+            A sample outline of the journey, combining cities, culture,
+            scenic areas and time to explore. Open each day to see the
+            current planning outline.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="container">
+          <div class="itinerary-layout">
+
+            <details class="day-card">
+              <summary>
+                <span class="day-title">
+                  <span class="day-number">01</span>
+                  <span><strong>Arrival in Tokyo</strong><small>Welcome to Japan</small></span>
+                </span><span class="day-arrow">⌄</span>
+              </summary>
+              <div class="day-content">
+                <ul>
+                  <li>Airport meeting and transfer arrangements</li>
+                  <li>Travel to the hotel and time to settle in</li>
+                  <li>Welcome briefing, subject to arrival times</li>
+                </ul>
+                No major sightseeing is planned for arrival day.
+              </div>
+            </details>
+
+            <details class="day-card">
+              <summary>
+                <span class="day-title">
+                  <span class="day-number">02</span>
+                  <span><strong>Discover Tokyo</strong><small>First impressions</small></span>
+                </span><span class="day-arrow">⌄</span>
+              </summary>
+              <div class="day-content">
+                <ul>
+                  <li>Explore selected city highlights</li>
+                  <li>Discover the contrast between modern and traditional Tokyo</li>
+                  <li>Breaks and lunch time during the day</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="day-card">
+              <summary>
+                <span class="day-title">
+                  <span class="day-number">03</span>
+                  <span><strong>Tokyo Culture</strong><small>Neighbourhoods and traditions</small></span>
+                </span><span class="day-arrow">⌄</span>
+              </summary>
+              <div class="day-content">
+                <ul>
+                  <li>Visit selected cultural areas</li>
+                  <li>Explore local streets and everyday life</li>
+                  <li>Return to the hotel after the day's activities</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="day-card">
+              <summary>
+                <span class="day-title">
+                  <span class="day-number">04</span>
+                  <span><strong>More of Tokyo</strong><small>City exploration</small></span>
+                </span><span class="day-arrow">⌄</span>
+              </summary>
+              <div class="day-content">
+                <ul>
+                  <li>Discover additional districts or attractions</li>
+                  <li>Time for shopping and relaxed exploration</li>
+                  <li>Details to be confirmed in the final itinerary</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="day-card">
+              <summary>
+                <span class="day-title">
+                  <span class="day-number">05</span>
+                  <span><strong>Tokyo to Mount Fuji</strong><small>From city to scenery</small></span>
+                </span><span class="day-arrow">⌄</span>
+              </summary>
+              <div class="day-content">
+                <ul>
+                  <li>Travel towards the Mount Fuji / Hakone region</li>
+                  <li>Scenic stops, depending on weather and conditions</li>
+                  <li>Check in to the next accommodation</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="day-card">
+              <summary>
+                <span class="day-title">
+                  <span class="day-number">06</span>
+                  <span><strong>Mount Fuji Region</strong><small>Nature and views</small></span>
+                </span><span class="day-arrow">⌄</span>
+              </summary>
+              <div class="day-content">
+                <ul>
+                  <li>Explore selected viewpoints and scenic areas</li>
+                  <li>Enjoy a more relaxed day among natural landscapes</li>
+                  <li>Activities will depend on weather and access</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="day-card">
+              <summary>
+                <span class="day-title">
+                  <span class="day-number">07</span>
+                  <span><strong>Regional Travel</strong><small>Beyond the big cities</small></span>
+                </span><span class="day-arrow">⌄</span>
+              </summary>
+              <div class="day-content">
+                <ul>
+                  <li>Travel towards the next region</li>
+                  <li>Planned rest stops along the way</li>
+                  <li>Overnight location to be confirmed</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="day-card">
+              <summary>
+                <span class="day-title">
+                  <span class="day-number">08</span>
+                  <span><strong>Discover Kyoto</strong><small>Historic Japan</small></span>
+                </span><span class="day-arrow">⌄</span>
+              </summary>
+              <div class="day-content">
+                <ul>
+                  <li>Explore selected historic districts</li>
+                  <li>Temples, traditional streets or cultural sites</li>
+                  <li>Time to enjoy the atmosphere at a comfortable pace</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="day-card">
+              <summary>
+                <span class="day-title">
+                  <span class="day-number">09</span>
+                  <span><strong>More of Kyoto</strong><small>Tradition and local life</small></span>
+                </span><span class="day-arrow">⌄</span>
+              </summary>
+              <div class="day-content">
+                <ul>
+                  <li>Visit additional areas of Kyoto</li>
+                  <li>Balance popular sights with quieter places</li>
+                  <li>Evening at leisure</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="day-card">
+              <summary>
+                <span class="day-title">
+                  <span class="day-number">10</span>
+                  <span><strong>Hiroshima</strong><small>History and reflection</small></span>
+                </span><span class="day-arrow">⌄</span>
+              </summary>
+              <div class="day-content">
+                <ul>
+                  <li>Travel to Hiroshima</li>
+                  <li>Explore selected historical sites</li>
+                  <li>Time for reflection and understanding</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="day-card">
+              <summary>
+                <span class="day-title">
+                  <span class="day-number">11</span>
+                  <span><strong>Travel to Osaka</strong><small>A new city atmosphere</small></span>
+                </span><span class="day-arrow">⌄</span>
+              </summary>
+              <div class="day-content">
+                <ul>
+                  <li>Transfer to Osaka</li>
+                  <li>Check in and get acquainted with the area</li>
+                  <li>Evening free to explore or dine locally</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="day-card">
+              <summary>
+                <span class="day-title">
+                  <span class="day-number">12</span>
+                  <span><strong>Explore Osaka</strong><small>Food and city life</small></span>
+                </span><span class="day-arrow">⌄</span>
+              </summary>
+              <div class="day-content">
+                <ul>
+                  <li>Discover selected city highlights and neighbourhoods</li>
+                  <li>Time for local food and shopping</li>
+                  <li>Activities to be confirmed</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="day-card">
+              <summary>
+                <span class="day-title">
+                  <span class="day-number">13</span>
+                  <span><strong>Return to Tokyo</strong><small>Final evening</small></span>
+                </span><span class="day-arrow">⌄</span>
+              </summary>
+              <div class="day-content">
+                <ul>
+                  <li>Travel back to Tokyo</li>
+                  <li>Final free time, depending on the travel schedule</li>
+                  <li>Farewell to the group</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="day-card">
+              <summary>
+                <span class="day-title">
+                  <span class="day-number">14</span>
+                  <span><strong>Departure</strong><small>Until next time</small></span>
+                </span><span class="day-arrow">⌄</span>
+              </summary>
+              <div class="day-content">
+                <ul>
+                  <li>Hotel checkout</li>
+                  <li>Planned airport transfer</li>
+                  <li>Departure assistance as arranged</li>
+                </ul>
+              </div>
+            </details>
+
+          </div>
+
+          <p class="itinerary-note">
+            <strong>Please note:</strong> This is a preliminary itinerary
+            for website development, not a confirmed travel schedule.
+            The exact route, overnight stops, activities, transport,
+            timings and inclusions must be confirmed before bookings open.
+          </p>
+
+          <div style="text-align:center;margin-top:30px">
+            <a class="button" href="#enquire">Ask About the Tour →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOUR INFORMATION -->
+    <section class="section soft-section" id="information">
+      <div class="container">
+        <div class="section-intro">
+          <p class="eyebrow">Good to know</p>
+          <h2>Tour Information</h2>
+          <p>
+            A few practical details to help you understand how the tour
+            is planned. Final arrangements will be supplied before booking.
+          </p>
+        </div>
+
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>What's Included</h3>
+            <ul>
+              <li>Planned airport transfers, subject to final arrangements</li>
+              <li>Private group transport as specified in the final itinerary</li>
+              <li>Hotel-to-activity transfers as arranged</li>
+              <li>Guided support and local knowledge</li>
+              <li>Accommodation and activities only as listed in the confirmed package</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h3>What's Not Included</h3>
+            <ul>
+              <li>International flights to and from Japan</li>
+              <li>Travel insurance</li>
+              <li>Meals not expressly listed as included</li>
+              <li>Personal spending and souvenirs</li>
+              <li>Optional activities and other unlisted expenses</li>
+              <li>Visa fees, if applicable</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="height:45px"></div>
+
+        <div class="section-intro">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Is this tour suitable for first-time visitors?</summary>
+            <div class="faq-answer">
+              Yes, the tour is being designed to make visiting Japan
+              straightforward, with organised transport, a planned itinerary
+              and help with language and local customs.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>How do we get around Japan?</summary>
+            <div class="faq-answer">
+              Private group transport is planned for the tour. The final
+              arrangements, including any exceptions, will be explained
+              before booking.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Do I need to speak Japanese?</summary>
+            <div class="faq-answer">
+              No. Japanese language ability is not required. Your guide
+              can help with everyday communication and local etiquette.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>How much walking is involved?</summary>
+            <div class="faq-answer">
+              Sightseeing is expected to involve some walking, potentially
+              on uneven surfaces and stairs. The walking requirements for
+              each day will be confirmed in the final itinerary.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>What accommodation and meals are included?</summary>
+            <div class="faq-answer">
+              The hotels, room arrangements, breakfasts and any other
+              included meals will be clearly specified in the confirmed
+              tour package before bookings open.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I arrive early or stay longer?</summary>
+            <div class="faq-answer">
+              Additional nights may be possible, subject to availability
+              and separate arrangements. Please ask when making an enquiry.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Do I need travel insurance?</summary>
+            <div class="faq-answer">
+              Comprehensive travel insurance is strongly recommended.
+              The final booking conditions will specify any insurance
+              requirements.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Are the itinerary and prices confirmed?</summary>
+            <div class="faq-answer">
+              Not yet. This website is an early project draft. Final
+              dates, prices, accommodation, transport and inclusions
+              will be published once confirmed.
+            </div>
+          </details>
+        </div>
+
+        <div style="height:48px"></div>
+
+        <div class="section-intro">
+          <h2>Terms and Conditions</h2>
+          <p>
+            The following is a preliminary outline, not a complete
+            booking contract.
+          </p>
+        </div>
+
+        <div class="terms-copy">
+          <h3>Bookings and Payments</h3>
+          <p>
+            Deposit amounts, payment deadlines, cancellation fees and
+            refund conditions must be provided in writing before any
+            booking is accepted.
+          </p>
+
+          <h3>Changes to the Itinerary</h3>
+          <p>
+            Planned activities may be affected by weather, availability,
+            transport disruption or safety considerations. Any applicable
+            change policy will be provided in the final booking terms.
+          </p>
+
+          <h3>Health and Accessibility</h3>
+          <p>
+            Travellers should review the walking requirements and let the
+            organiser know about relevant mobility or accessibility needs
+            before booking, so suitability can be discussed.
+          </p>
+
+          <h3>Insurance and Travel Documents</h3>
+          <p>
+            Travellers are responsible for having valid travel documents
+            and meeting applicable entry requirements. Insurance terms
+            will be stated in the final booking documentation.
+          </p>
+
+          <h3>Final Booking Terms</h3>
+          <p>
+            No payment should be taken on the basis of this draft page.
+            Complete booking terms, operator details, cancellation
+            provisions and applicable legal requirements must be reviewed
+            before the tour is offered for sale.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENQUIRY -->
+    <section class="section enquiry-section" id="enquire">
+      <div class="container enquiry-grid">
+        <div>
+          <p class="eyebrow">Start a conversation</p>
+          <h2>Interested in Joining a Future Tour?</h2>
+          <p class="section-intro">
+            Have a question or want to hear more? Send an enquiry and
+            let us know what you'd like to find out. There's no obligation
+            to book.
+          </p>
+
+          <div class="enquiry-points">
+            <span>Ask about planned dates and pricing</span>
+            <span>Find out more about the route and arrangements</span>
+            <span>Discuss your travel questions before deciding</span>
+          </div>
+        </div>
+
+        <form class="enquiry-form" id="enquiryForm">
+          <div class="form-row">
+            <div class="field">
+              <label for="name">Full name *</label>
+              <input id="name" name="name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="email">Email address *</label>
+              <input id="email" name="email" type="email"
+                autocomplete="email" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="country">Country of residence</label>
+              <input id="country" name="country" autocomplete="country-name">
+            </div>
+            <div class="field">
+              <label for="travellers">Number of travellers</label>
+              <select id="travellers" name="travellers">
+                <option value="1">1 traveller</option>
+                <option value="2">2 travellers</option>
+                <option value="3">3 travellers</option>
+                <option value="4 or more">4 or more</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="timing">Preferred travel dates</label>
+            <input id="timing" name="timing"
+              placeholder="e.g. Spring 2027, flexible">
+          </div>
+
+          <div class="field">
+            <label for="message">Questions or comments</label>
+            <textarea id="message" name="message"
+              placeholder="What would you like to know?"></textarea>
+          </div>
+
+          <p class="form-note">
+            This preview form is not connected to an email or booking system yet.
+            Please don't enter sensitive personal information.
+          </p>
+
+          <button class="button" type="submit">Prepare Enquiry →</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- FINAL CALL TO ACTION -->
+    <section class="final-cta">
+      <div class="container">
+        <p class="eyebrow">Your Japan journey starts here</p>
+        <h2>Explore Japan With Confidence</h2>
+        <p>Thoughtfully planned travel, friendly guidance and time to enjoy the experience.</p>
+        <a class="button" href="#enquire">Register Your Interest →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>Japan Tour · Small-group travel in Japan</span>
+      <span>Website preview · Tour details subject to confirmation</span>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.textContent = isOpen ? "Close ✕" : "Menu ☰";
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "Menu ☰";
+      });
+    });
+
+    document.getElementById("enquiryForm").addEventListener("submit", (event) => {
+      event.preventDefault();
+      document.getElementById("formStatus").textContent =
+        "This is a website preview: your enquiry has not been sent. " +
+        "We'll connect this form to an email service before publishing it for real enquiries.";
+    });
+  </script>
+
+</body>
+</html>
